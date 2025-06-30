@@ -1,0 +1,73 @@
+.hero {
+    background-color: var(--color-grey-light);
+    padding: var(--padding-xl) 0;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-xl);
+
+        @media (min-width: 992px) {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    &__text {
+        flex: 1;
+    }
+
+    &__headline {
+        font-size: var(--fs-xl);
+        color: var(--color-blue-main);
+        margin-bottom: var(--gap-md);
+        line-height: 1.2;
+    }
+
+    &__description {
+        font-size: var(--fs-base);
+        line-height: var(--lh-md);
+        max-width: 600px;
+        color: var(--color-regular);
+    }
+
+    &__image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: var(--radius-sm);
+        }
+    }
+
+    @media (max-width: 991px) {
+        &__image {
+            order: -1;
+        }
+    }
+
+    // Модификатор для блога
+    &--blog {
+        background: var(--bg-url);
+        background-size: cover;
+        color: var(--color-white);
+        text-align: center;
+        padding: var(--padding-xl) 0;
+
+        .hero__headline {
+            color: var(--color-white);
+            font-size: var(--fs-xl);
+            margin-bottom: var(--gap-md);
+        }
+
+        .hero__description {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: var(--fs-md);
+            margin: 0 auto;
+        }
+    }
+}

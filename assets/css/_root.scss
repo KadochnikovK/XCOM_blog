@@ -1,0 +1,246 @@
+// _root.scss
+
+:root {
+    // Цвета (из предыдущего проекта + новые)
+    --color-blue-dark: #0a3d6b;
+    --color-blue-main: #005baa;
+    --color-blue-second: #1a7bbf;
+    --color-orange: #f27028;
+    --color-orange-second: #f59324;
+    --color-orange-dark: #d45a1a;
+    --color-regular: #333;
+    --color-grey: #888;
+    --color-grey-light: #f6f6f6;
+    --color-white: #fff;
+    --color-green: #2ecc71;
+    --color-red: #e74c3c;
+
+    // Новые цвета для блога
+    --color-text: #333;
+    --color-text-light: #666;
+    --color-border: #e0e0e0;
+    --color-bg-light: #f9f9f9;
+
+    // Отступы (из предыдущего проекта)
+    --gap-xl: 80px;
+    --gap-lg: 40px;
+    --gap-base: 30px;
+    --gap-md: 20px;
+    --gap-sm: 10px;
+    --gap-xs: 5px;
+    --gap-xxs: 3px;
+
+    // Паддинги (из предыдущего проекта)
+    --padding-xl: 80px;
+    --padding-lg: 40px;
+    --padding-md: 20px;
+    --padding-base: 10px 20px;
+    --padding-sm: 10px;
+    --padding-xs: 5px;
+
+    // Радиусы (из предыдущего проекта)
+    --radius-lg: 24px;
+    --radius-md: 16px;
+    --radius-sm: 8px;
+    --radius-xs: 4px;
+
+    // Размеры шрифтов (из предыдущего проекта + адаптация)
+    --fs-xxl: 3rem; // Для основного заголовка
+    --fs-xl: 2.5rem; // 40px
+    --fs-lg: 2rem; // 32px
+    --fs-md: 1.5rem; // 24px
+    --fs-base: 1.25rem; // 20px
+    --fs-sm: 1rem; // 16px
+    --fs-xs: 0.875rem; // 14px
+    --fs-xxs: 0.75rem; // 12px
+
+    // Межстрочные интервалы (из предыдущего проекта)
+    --lh-lg: 2;
+    --lh-md: 1.6;
+    --lh-sm: 1.4;
+    --lh-xs: 1.2;
+
+    // Ширины (из предыдущего проекта)
+    --max-size: 1440px;
+    --content-size: 1200px;
+    --sidebar-width: 300px;
+
+    // Бордеры (из предыдущего проекта)
+    --border-h-lg: 4px;
+    --border-h-md: 2px;
+    --border-h-sm: 1px;
+
+    // Тени (новые для блога)
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+
+    // Размеры аватарок (новые)
+    --avatar-size-xxl: 250px;
+    --avatar-size-xl: 120px;
+    --avatar-size-lg: 80px;
+    --avatar-size: 60px;
+    --avatar-size-sm: 40px;
+    --avatar-size-xs: 30px;
+
+    // Анимации (из предыдущего проекта)
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    // Z-index (из предыдущего проекта)
+    --z-index-modal: 100;
+    --z-index-header: 50;
+    --z-index-dropdown: 40;
+    --z-index-default: 1;
+    --z-index-below: -1;
+}
+
+// Медиазапросы (из предыдущего проекта)
+$breakpoints: (
+    "xs": 480px,
+    "sm": 576px,
+    "md": 768px,
+    "lg": 992px,
+    "xl": 1200px,
+    "xxl": 1440px
+);
+
+@mixin respond-to($breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
+// Адаптивные настройки (из предыдущего проекта)
+@include respond-to("lg") {
+    :root {
+        --fs-xl: 3rem;
+        --fs-lg: 2.25rem;
+        --fs-md: 1.75rem;
+        --fs-base: 1.5rem;
+        --fs-sm: 1.25rem;
+        --fs-xs: 1rem;
+    }
+}
+
+// Общие стили (из предыдущего проекта + дополнения)
+* {
+    box-sizing: border-box;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    color: var(--color-regular);
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--color-white);
+    line-height: var(--lh-md);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    line-height: var(--lh-sm);
+    font-weight: 600;
+    color: var(--color-blue-main);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-fast);
+
+    &:hover {
+        color: var(--color-orange);
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.headline {
+    margin-bottom: var(--fs-xs);
+}
+// Утилитные классы (из предыдущего проекта + новые)
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    max-width: var(--content-size);
+    padding:  var(--padding-lg) 20px;
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap-md);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap-md);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orange {
+    color: var(--color-orange);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.note {
+    padding: var(--padding-base);
+}
+
+// Анимации (из предыдущего проекта)
+@keyframes ripple {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+    }
+}
+
+// Полигоны (из предыдущего проекта)
+.poligon-bg {
+    position: relative;
+    z-index: 0;
+    color: var(--color-white);
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -5%;
+        left: -5%;
+        right: -5%;
+        bottom: -5%;
+        border-radius: var(--radius-sm);
+        transform: skew(-20deg);
+        background: linear-gradient(90deg, var(--color-blue-main) 0%, var(--color-blue-second) 100%);
+        z-index: -1;
+    }
+}

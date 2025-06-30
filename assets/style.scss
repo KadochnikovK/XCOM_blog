@@ -1,0 +1,54 @@
+// @import "./css/normalize";
+@import "./css/root";
+@import "./css/font";
+@import "./css/button";
+@import "./css/header";
+@import "./css/hero";
+@import "./css/breadcrumbs";
+@import "./css/footer";
+@import "./css/blog-nav";
+@import "./css/articles";
+@import "./css/article";
+@import "./css/authors";
+@import "./css/author-page";
+
+// Для плавного появления страницы
+body:not(.loaded) {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+// Для отключения скролла при открытом меню
+.no-scroll {
+    overflow: hidden;
+}
+
+// Анимация загрузки для кнопок
+.button--loading {
+    position: relative;
+    color: transparent !important;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        margin: -10px 0 0 -10px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top-color: #fff;
+        animation: spin 0.8s linear infinite;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

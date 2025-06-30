@@ -1,0 +1,118 @@
+.author-page {
+  &__content {
+    display: grid;
+    gap: var(--gap-xl);
+
+    @media (min-width: 992px) {
+      grid-template-columns: 300px 1fr;
+    }
+  }
+}
+
+.author-profile {
+  &__avatar {
+    width: var(--avatar-size-xxl);
+    height: var(--avatar-size-xxl);
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: var(--gap-md);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    font-size: var(--fs-lg);
+    margin-bottom: var(--gap-xs);
+  }
+
+  &__position {
+    font-size: var(--fs-base);
+    color: var(--color-blue-main);
+    margin-bottom: var(--gap-xs);
+  }
+
+  &__education {
+    font-size: var(--fs-sm);
+    color: var(--color-text-light);
+    margin-bottom: var(--gap-md);
+  }
+
+  &__bio {
+    margin-bottom: var(--gap-lg);
+
+    p {
+      font-size: var(--fs-sm);
+      line-height: var(--lh-md);
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: var(--gap-md);
+    margin-bottom: var(--gap-lg);
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--color-grey-light);
+      color: var(--color-blue-main);
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: var(--color-blue-main);
+        color: var(--color-white);
+      }
+    }
+  }
+
+  &__credentials {
+    h3 {
+      font-size: var(--fs-sm);
+      margin-bottom: var(--gap-sm);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: var(--fs-sm);
+    }
+
+    li {
+      margin-bottom: var(--gap-xs);
+      position: relative;
+      padding-left: var(--gap-md);
+
+      &::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--color-orange);
+      }
+    }
+  }
+}
+
+.author-articles {
+  &__title {
+    font-size: var(--fs-lg);
+    margin-bottom: var(--gap-lg);
+  }
+
+  &__grid {
+    display: grid;
+    gap: var(--gap-lg);
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.hero {
+  &--blog {
+    background-color: var(--color-blue-main);
+    color: var(--color-white);
+    padding: var(--padding-xl) 0;
+    text-align: center;
+    
+    .hero__headline {
+      color: var(--color-white);
+      font-size: var(--fs-xl);
+      margin-bottom: var(--gap-md);
+    }
+    
+    .hero__description {
+      font-size: var(--fs-md);
+      opacity: 0.9;
+    }
+  }
+}
