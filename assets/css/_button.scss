@@ -17,14 +17,14 @@
   &__icon {
     color: var(--color-white) !important;
   }
-  // Общие стили для всех кнопок
+
   background: linear-gradient(90deg, var(--color-blue-main) 0%, var(--color-blue-second) 100%);
 
   @media (max-width: 1023px) {
     font-size: var(--fs-sm);
   }
 
-  // Стили только для кликабельных кнопок
+
   &:not(.button__unclickable) {
     cursor: pointer;
     transition:
@@ -59,7 +59,6 @@
     }
   }
 
-  // Стили только для некликабельных кнопок
   &__unclickable {
     cursor: default;
     pointer-events: none;

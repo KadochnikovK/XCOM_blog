@@ -625,7 +625,7 @@ img {
 .blog-nav__tabs {
   display: flex;
   gap: var(--gap-sm);
-  overflow-x: auto;
+  flex-wrap: wrap;
   padding-bottom: var(--padding-xs);
 }
 @media (min-width: 768px) {
@@ -1046,4 +1046,4 @@ body.loaded {
   to {
     transform: rotate(360deg);
   }
-}
+}/*# sourceMappingURL=style.css.map */

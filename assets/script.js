@@ -105,6 +105,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const filterButtons = document.querySelectorAll(".button--tab[data-tab]");
 
     if (filterButtons.length) {
+      // Находим кнопку "all" и автоматически кликаем по ней при загрузке
+
+
       filterButtons.forEach((button) => {
         button.addEventListener("click", function () {
           // Удаляем активный класс у всех кнопок
@@ -113,19 +116,29 @@ document.addEventListener("DOMContentLoaded", function () {
           this.classList.add("active");
 
           const filterValue = this.dataset.tab;
-          const articles = document.querySelectorAll(".article-card");
+          const articles = document.querySelectorAll(".article-card, .authors__author-card");
 
           articles.forEach((article) => {
-            if (filterValue === "all" || article.dataset.category === filterValue) {
-              article.style.display = "block";
+            if (filterValue === "all") {
+              // Показываем все статьи, кроме категории "authors"
+              article.style.display = article.dataset.category === "authors" ? "none" : "block";
             } else {
-              article.style.display = "none";
+              // Показываем только статьи выбранной категории
+              article.style.display = article.dataset.category === filterValue ? "block" : "none";
             }
           });
         });
       });
+
+      const allButton = Array.from(filterButtons).find(btn => btn.dataset.tab === "all");
+      if (allButton) {
+        allButton.classList.add("active");
+        // Имитируем клик, чтобы применить фильтр
+        allButton.click();
+      }
     }
   }
+
 
   // ========== Форма заявки ==========
   function initApplicationForm() {

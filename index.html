@@ -1,155 +1,194 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Блог компании | XCOM</title>
-    <link rel="stylesheet" href="./assets/css/fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="./assets/style.css" />
-  </head>
-  <body>
-    <!-- Header -->
-    <header class="header container">
-      <div class="header__content content">
-        <div class="header__item">
-          <a href="index.html" class="logo">
-            <img class="logo__img" src="./assets/images/logo.svg" alt="XCOM" />
-          </a>
-          <nav class="header__menu">
-            <a href="/" class="header__link">Блог</a>
-            <a href="authors.html" class="header__link">Авторы</a>
-            <a href="categories.html" class="header__link">Разделы</a>
-            <a href="#form" class="header__link header__link--main">Оставить заявку</a>
-          </nav>
-        </div>
-        <div class="header__item">
-          <a href="tel:+74952605861" class="header__button button button--main">
-            <img src="./assets/images/phone.svg" alt="" />
-            +7 (495) 260 58 61
-          </a>
-        </div>
-        <div class="header__item">
-          <div class="header__hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Блог компании | XCOM</title>
+  <link rel="stylesheet" href="./assets/css/fontawesome/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+
+<body>
+
+  <header class="header container">
+    <div class="header__content content">
+      <div class="header__item">
+        <a href="index.html" class="logo">
+          <img class="logo__img" src="./assets/images/logo.svg" alt="XCOM" />
+        </a>
+        <nav class="header__menu">
+          <a href="/" class="header__link">Блог</a>
+          <a href="authors.html" class="header__link">Авторы</a>
+          <a href="categories.html" class="header__link">Разделы</a>
+          <a href="#form" class="header__link header__link--main">Оставить заявку</a>
+        </nav>
+      </div>
+      <div class="header__item">
+        <a href="tel:+74952605861" class="header__button button button--main">
+          <img src="./assets/images/phone.svg" alt="" />
+          +7 (495) 260 58 61
+        </a>
+      </div>
+      <div class="header__item">
+        <div class="header__hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <!-- Breadcrumbs -->
-    <div class="breadcrumbs container">
-      <div class="breadcrumbs__content content">
-        <nav class="breadcrumbs__nav">
-          <a href="index.html" class="breadcrumbs__link">Главная</a>
-          <span class="breadcrumbs__separator">•</span>
-          <span class="breadcrumbs__current">Блог</span>
+
+  <div class="breadcrumbs container">
+    <div class="breadcrumbs__content content">
+      <nav class="breadcrumbs__nav">
+        <a href="index.html" class="breadcrumbs__link">Главная</a>
+        <span class="breadcrumbs__separator">•</span>
+        <span class="breadcrumbs__current">Блог</span>
+      </nav>
+    </div>
+  </div>
+  <main class="main">
+
+    <section class="hero hero--blog container" style="--bg-url: url(./images/bg.jpg)">
+      <div class="hero__content content">
+        <div class="hero__text">
+          <h1 class="hero__headline">Блог <span class="orange">XCOM</span></h1>
+          <p class="hero__description">Экспертные статьи и новости от наших специалистов</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="blog-nav container">
+      <div class="blog-nav__content content">
+        <div class="blog-nav__tabs">
+          <button class="button button--tab active" data-tab="all">Все статьи</button>
+          <button class="button button--tab" data-tab="technology">Технологии</button>
+          <button class="button button--tab" data-tab="business">Бизнес</button>
+          <button class="button button--tab" data-tab="hardware">Оборудование</button>
+          <button class="button button--tab" data-tab="authors">Авторы</button>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="articles container">
+      <div class="articles__content content">
+        <div class="articles__grid">
+
+          <article class="article-card" data-category="technology">
+            <a href="article.html" class="article-card__link">
+              <div class="article-card__image">
+                <img src="./assets/images/articles/tech-1.jpg" alt="Технологии сборки" loading="lazy" />
+              </div>
+              <div class="article-card__content">
+                <span class="article-card__category">Технологии</span>
+                <h3 class="article-card__title">Новые технологии в сборке промышленных ПК</h3>
+                <div class="article-card__meta">
+                  <span class="article-card__date">15 июня 2025</span>
+                  <span class="article-card__author">Иван Петров</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+      
+          <article class="article-card" data-category="business">
+            <a href="article.html" class="article-card__link">
+              <div class="article-card__image">
+                <img src="./assets/images/articles/business-1.jpg" alt="Бизнес решения" loading="lazy" />
+              </div>
+              <div class="article-card__content">
+                <span class="article-card__category">Бизнес</span>
+                <h3 class="article-card__title">Оптимизация IT-инфраструктуры для среднего бизнеса</h3>
+                <div class="article-card__meta">
+                  <span class="article-card__date">10 июня 2025</span>
+                  <span class="article-card__author">Анна Смирнова</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+      
+          <article class="article-card" data-category="hardware">
+            <a href="article.html" class="article-card__link">
+              <div class="article-card__image">
+                <img src="./assets/images/articles/hardware-1.jpg" alt="Оборудование" loading="lazy" />
+              </div>
+              <div class="article-card__content">
+                <span class="article-card__category">Оборудование</span>
+                <h3 class="article-card__title">Обзор новых серверных решений 2025</h3>
+                <div class="article-card__meta">
+                  <span class="article-card__date">5 июня 2025</span>
+                  <span class="article-card__author">Сергей Иванов</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="authors__author-card" data-category="authors">
+            <a href="author.html" class="authors__link">
+              <div class="authors__avatar">
+                <img src="./assets/images/authors/author1.jpg" alt="Иван Петров" />
+              </div>
+              <div class="authors__info">
+                <h3 class="authors__name">Иван Петров</h3>
+                <p class="authors__position">Ведущий инженер</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="authors__author-card" data-category="authors">
+            <a href="author.html" class="authors__link">
+              <div class="authors__avatar">
+                <img src="./assets/images/authors/author2.jpg" alt="Анна Смирнова" />
+              </div>
+              <div class="authors__info">
+                <h3 class="authors__ame">Анна Смирнова</h3>
+                <p class="authors__position">IT-архитектор</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="authors__author-card" data-category="authors">
+            <a href="author.html" class="authors__link">
+              <div class="authors__avatar">
+                <img src="./assets/images/authors/author3.jpg" alt="Сергей Иванов" />
+              </div>
+              <div class="authors__info">
+                <h3 class="authors__name">Сергей Иванов</h3>
+                <p class="authors__position">Технический директор</p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer container">
+    <div class="footer__content content">
+      <div class="footer__item">
+        <a href="index.html" class="logo">
+          <img class="logo__img" src="./assets/images/logo.svg" alt="XCOM" />
+        </a>
+        <nav class="footer__menu">
+          <a href="blog.html" class="footer__link">Блог</a>
+          <a href="authors.html" class="footer__link">Авторы</a>
+          <a href="categories.html" class="footer__link">Разделы</a>
+          <a href="#form" class="footer__link">Оставить заявку</a>
         </nav>
       </div>
     </div>
-    <main class="main">
-      <!-- Баннер -->
-      <section class="hero hero--blog container" style="--bg-url: url(./images/bg.jpg)">
-        <div class="hero__content content">
-          <div class="hero__text">
-            <h1 class="hero__headline">Блог <span class="orange">XCOM</span></h1>
-            <p class="hero__description">Экспертные статьи и новости от наших специалистов</p>
-          </div>
-        </div>
-      </section>
+  </footer>
 
-      <!-- Навигация -->
-      <section class="blog-nav container">
-        <div class="blog-nav__content content">
-          <div class="blog-nav__tabs">
-            <button class="button button--tab active" data-tab="all">Все статьи</button>
-            <button class="button button--tab" data-tab="technology">Технологии</button>
-            <button class="button button--tab" data-tab="business">Бизнес</button>
-            <button class="button button--tab" data-tab="hardware">Оборудование</button>
-            <button class="button button--tab" data-tab="authors">Авторы</button>
-          </div>
-        </div>
-      </section>
+  <div class="container margin-top-sm margin-bottom-sm">
+    <p class="note note--left content" id="copy"></p>
+  </div>
 
-      <!-- Лента статей -->
-      <section class="articles container">
-        <div class="articles__content content">
-          <div class="articles__grid">
-            <!-- Статья 1 -->
-            <article class="article-card" data-category="technology">
-              <a href="article.html" class="article-card__link">
-                <div class="article-card__image">
-                  <img src="./assets/images/articles/tech-1.jpg" alt="Технологии сборки" loading="lazy" />
-                </div>
-                <div class="article-card__content">
-                  <span class="article-card__category">Технологии</span>
-                  <h3 class="article-card__title">Новые технологии в сборке промышленных ПК</h3>
-                  <div class="article-card__meta">
-                    <span class="article-card__date">15 июня 2025</span>
-                    <span class="article-card__author">Иван Петров</span>
-                  </div>
-                </div>
-              </a>
-            </article>
+  <script src="./assets/script.js" defer></script>
+</body>
 
-            <!-- Статья 2 -->
-            <article class="article-card" data-category="business">
-              <a href="article.html" class="article-card__link">
-                <div class="article-card__image">
-                  <img src="./assets/images/articles/business-1.jpg" alt="Бизнес решения" loading="lazy" />
-                </div>
-                <div class="article-card__content">
-                  <span class="article-card__category">Бизнес</span>
-                  <h3 class="article-card__title">Оптимизация IT-инфраструктуры для среднего бизнеса</h3>
-                  <div class="article-card__meta">
-                    <span class="article-card__date">10 июня 2025</span>
-                    <span class="article-card__author">Анна Смирнова</span>
-                  </div>
-                </div>
-              </a>
-            </article>
-
-            <!-- Статья 3 -->
-            <article class="article-card" data-category="hardware">
-              <a href="article.html" class="article-card__link">
-                <div class="article-card__image">
-                  <img src="./assets/images/articles/hardware-1.jpg" alt="Оборудование" loading="lazy" />
-                </div>
-                <div class="article-card__content">
-                  <span class="article-card__category">Оборудование</span>
-                  <h3 class="article-card__title">Обзор новых серверных решений 2025</h3>
-                  <div class="article-card__meta">
-                    <span class="article-card__date">5 июня 2025</span>
-                    <span class="article-card__author">Сергей Иванов</span>
-                  </div>
-                </div>
-              </a>
-            </article>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer container">
-      <div class="footer__content content">
-        <div class="footer__item">
-          <a href="index.html" class="logo">
-            <img class="logo__img" src="./assets/images/logo.svg" alt="XCOM" />
-          </a>
-          <nav class="footer__menu">
-            <a href="blog.html" class="footer__link">Блог</a>
-            <a href="authors.html" class="footer__link">Авторы</a>
-            <a href="categories.html" class="footer__link">Разделы</a>
-            <a href="#form" class="footer__link">Оставить заявку</a>
-          </nav>
-        </div>
-      </div>
-    </footer>
-
-    <div class="container margin-top-sm margin-bottom-sm">
-      <p class="note note--left content" id="copy"></p>
-    </div>
-
-    <script src="./assets/script.js" defer></script>
-  </body>
 </html>

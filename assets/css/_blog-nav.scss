@@ -6,7 +6,8 @@
   &__tabs {
     display: flex;
     gap: var(--gap-sm);
-    overflow-x: auto;
+    // overflow-x: auto;
+    flex-wrap: wrap;
     padding-bottom: var(--padding-xs);
     
     @media (min-width: 768px) {
